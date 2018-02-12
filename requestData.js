@@ -1,11 +1,15 @@
-const Api = require('./lib/rest/api.js');
-const util = require('util');
-const environmentConfig = require('../environment.json');
-require('./lib/async_logging');
+const Api = require('./api.js');
 
-var api = new Api(environmentConfig.api);
+// *** TO DO - get from settings
+var apiDta = {
+	"jwt": "<token>",
+	"installId": "E629CCCC-A9E0-40F1-8BB8-43A24830346B",
+	"keaseApiKey": "14445b6a2dba"
+};
 
-async function main() {
+var api = new Api(apiDta);
+
+async function getFirmwareKeys() {
   try{
     var locks = await api.getLocks();
     var lockIds = Object.keys(locks);
@@ -18,6 +22,8 @@ async function main() {
         var serialNumber = firmware.toString('ascii', extraDataStart, extraDataStart + 10);
         var readLockId = firmware.toString('hex', extraDataStart + 16, extraDataStart + 32);
         var firmwareKey = firmware.toString('hex', extraDataStart + 48, extraDataStart + 64);
+		  
+		// *** TO DO - deal with data, don't log
         console.log(l);
         console.log('sn: '+ serialNumber);
         console.log('id: '+ readLockId);
@@ -31,4 +37,4 @@ async function main() {
   }
 }
 
-main();
+getFirmwareKeys();
