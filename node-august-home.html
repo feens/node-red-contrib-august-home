@@ -6,9 +6,9 @@
 			name: {value: "August Home" }
 		},
 		credentials: {
-			username: {type:"text"},
-			password: {type:"password"},
-			deviceID: {type: "text"}
+			email: {type:"text"},
+			phone: {type: "text"},
+			apiKey: {type:"password"}
 		},
 		inputs:1,
 		outputs:1,
@@ -30,13 +30,12 @@
 		<input type="text" id="node-input-email" placeholder="user@gmail.com">
 	</div>
 	<div class="form-row">
-		<label for="node-input-api-key"><i class="icon-tag"></i>API key</label>
-		<input type="password" id="node-input-api-key" placeholder="">
-	</div>
-	<div class="form-row">
-		<h4>Phone Number</h4>
 		<label for="node-input-phone"><i class="icon-tag"></i>Phone Number</label>
 		<input type="text" id="node-input-phone" placeholder="+15556661234">
+	</div>
+	<div class="form-row">
+		<label for="node-input-apiKey"><i class="icon-tag"></i>API key</label>
+		<input type="text" id="node-input-apiKey" placeholder="">
 	</div>
 </script>
 
