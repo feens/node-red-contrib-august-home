@@ -1,8 +1,8 @@
 {
-  "name": "node-red-contrib-tcc-honeywell",
+  "name": "node-red-contrib-august-home",
   "version": "0.0.1",
-  "description": "Node for interfacing with legacy (my total connect comfort/TCC) Honeywell thermostats in Node-Red",
-  "main": "node-tcc-honeywell.js",
+  "description": "Node-Red Node for August Home Smart Locks (and other devices)",
+  "main": "node-august-home.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,22 +11,23 @@
   },
   "node-red" : {
     "nodes": {
-      "tcc-honeywell": "node-tcc-honeywell.js"
+      "august-home": "node-august-home.js"
     }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theminor/node-red-contrib-tcc-honeywell.git"
+    "url": "git+https://github.com/theminor/node-red-contrib-august-home.git"
   },
   "keywords": [
     "node-red",
-    "honeywell",
-	  "tcc"
+    "august",
+	"august home",
+	"smart lock"
   ],
   "author": "theminor",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/theminor/node-red-contrib-tcc-honeywell/issues"
+    "url": "https://github.com/theminor/node-red-contrib-august-home/issues"
   },
-  "homepage": "https://github.com/theminor/node-red-contrib-tcc-honeywell#readme"
+  "homepage": "https://github.com/theminor/node-red-contrib-august-home#readme"
 }
