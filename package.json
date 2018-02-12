@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "request": ">=2.83.0"
+    "keymaker": "jmaxxz/keymaker"
   },
   "node-red" : {
     "nodes": {
