@@ -1,9 +1,9 @@
 <script type="text/javascript">
-	RED.nodes.registerType('tcc-honeywell', {
+	RED.nodes.registerType('august-home', {
 		category: 'function',
 		color: '#c0deed',
 		defaults: {
-			name: {value: "Honeywell TCC" }
+			name: {value: "August Home" }
 		},
 		credentials: {
 			username: {type:"text"},
@@ -12,34 +12,34 @@
 		},
 		inputs:1,
 		outputs:1,
-		icon: "thermometer-half.png",
+		icon: "aug2.png",
 		label: function() {
-			return this.name || "Honeywell TCC";
+			return this.name || "August Home";
 		}
 	});
 </script>
 
-<script type="text/x-red" data-template-name="tcc-honeywell">
+<script type="text/x-red" data-template-name="august-home">
 	<div class="form-row">
 		<label for="node-input-name"><i class="icon-tag"></i>Name</label>
-		<input type="text" id="node-input-name" placeholder="Honeywell TCC">
+		<input type="text" id="node-input-name" placeholder="August Home">
 	</div>
 	<div class="form-row">
-		<h4>Honeywell mytotalconnectcomfort.com Login Information</h4>
-		<label for="node-input-username"><i class="icon-tag"></i>Username</label>
-		<input type="text" id="node-input-username" placeholder="user@gmail.com">
+		<h4>August Login Information</h4>
+		<label for="node-input-email"><i class="icon-tag"></i>Email</label>
+		<input type="text" id="node-input-email" placeholder="user@gmail.com">
 	</div>
 	<div class="form-row">
-		<label for="node-input-password"><i class="icon-tag"></i>Password</label>
-		<input type="password" id="node-input-password" placeholder="password">
+		<label for="node-input-api-key"><i class="icon-tag"></i>API key</label>
+		<input type="password" id="node-input-api-key" placeholder="">
 	</div>
 	<div class="form-row">
-		<h4>Thermostat Information</h4>
-		<label for="node-input-deviceID"><i class="icon-tag"></i>Device ID</label>
-		<input type="text" id="node-input-deviceID" placeholder="5555555">
+		<h4>Phone Number</h4>
+		<label for="node-input-phone"><i class="icon-tag"></i>Phone Number</label>
+		<input type="text" id="node-input-phone" placeholder="+15556661234">
 	</div>
 </script>
 
-<script type="text/x-red" data-help-name="tcc-honeywell">
-	<p>A node that connects to legacy Honeywell thermostats via mytotalconnectcomfort.com</p>
+<script type="text/x-red" data-help-name="august-home">
+	<p>Node that connects to August Home Smart Locks (and other devices)</p>
 </script>
