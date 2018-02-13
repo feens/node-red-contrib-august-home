@@ -1,3 +1,5 @@
+var hdrs = require('./augustPostmanCollection.json');
+
 module.exports = {
 	
 	/**
