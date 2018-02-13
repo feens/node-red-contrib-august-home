@@ -1,13 +1,3 @@
-const Api = require('./api.js');
-
-// *** TO DO - get from settings
-var apiDta = {
-	"jwt": "<token>",
-	"installId": "E629CCCC-A9E0-40F1-8BB8-43A24830346B",
-	"keaseApiKey": "14445b6a2dba"
-};
-
-var api = new Api(apiDta);
 
 async function getFirmwareKeys() {
   try{
