@@ -6,7 +6,7 @@ module.exports = {
 	* @param {Object} api - the base api data
 	* @param {function(string, function(string, string))} questionFunc - a function that can be called to interact with the user, ask a question and callback(error, answer) on the response to the question 
 	*/
-	var getUserApiKey = async function(api, question) {
+	var getUserApiKey = async function(api, questionFunc) {
 		questionFunc('What is your phone number (format: +15551114444)?', function(err, phoneNumber) {
 			questionFunc('What is your email address?', function(err, emailAddress) {
 				questionFunc('What is your password?', function(err, passwd) {
