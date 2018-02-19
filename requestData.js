@@ -1,14 +1,15 @@
-var hdrs = require('./augustPostmanCollection.json');
+const request = require('request');
+const hdrs = require('./augustPostmanCollection.json').item;
 
 module.exports = {};
 
 /**
-* Utility to go through all the steps needed to get the user's API key
-*
-* @param {Object} api - the base api data
-* @param {function(string)} questionFunc - an async function that can be called to interact with the user and return the response to the question 
-* @returns {Promise<string>} sets and returns the API key 
-*/
+ * Utility to go through all the steps needed to get the user's API key
+ *
+ * @param {Object} api - the base api data
+ * @param {function(string)} questionFunc - an async function that can be called to interact with the user and return the response to the question 
+ * @returns {Promise<string>} sets and returns the API key 
+ */
 module.exports.getUserApiKey = async function(api, questionFunc) {
 	let phoneNumber = await questionFunc('What is your phone number (format: +15551114444)?');
 	let emailAddress = await questionFunc('What is your email address?');
@@ -27,18 +28,18 @@ module.exports.getUserApiKey = async function(api, questionFunc) {
 };
 
 /**
-* Get firmware keys and other information from all locks
-*
-* @param {Object} api - the base api data
-* @returns {Promise<Object[]>} an array of objects, each in this form: {l: lock, sn: serial number, id: lock ID, key: firmware key, err: error string}
-*/
+ * Get firmware keys and other information from all locks
+ *
+ * @param {Object} api - the base api data
+ * @returns {Promise<Object[]>} an array of objects, each in this form: {l: lock, sn: serial number, id: lock ID, key: firmware key, err: error string}
+ */
 module.exports.getFirmwareKeys = async function(api) {
-	var locks = await api.getLocks();
-	var lockIds = Object.keys(locks);
-	var rtn = [];
-	for (var i = 0; i < lockIds.length; i++) {
-		var firmware = await api.getTiFirmware(lockIds[i], '1.1.20');
-		var extraDataStart = firmware.length - 68;
+	let locks = await api.getLocks();
+	let lockIds = Object.keys(locks);
+	let rtn = [];
+	for (let i = 0; i < lockIds.length; i++) {
+		let firmware = await api.getTiFirmware(lockIds[i], '1.1.20');
+		let extraDataStart = firmware.length - 68;
 		rtn.push({
 			l: locks[lockIds[i]],
 			sn: firmware.toString('ascii', extraDataStart, extraDataStart + 10),
@@ -47,4 +48,27 @@ module.exports.getFirmwareKeys = async function(api) {
 		});
 	}
 	return rtn; 
+};
+
+/**
+ * Call an API from augustPostmanCollection.json
+ * 
+ * @param {Object} configs - for each {key:value}, replace the key with the value for each bit in augustPostmanCollection.json inside handlebars {{}}
+ * @param {string} groupName - the "name" of the group item for the command
+ * @param {string} itemName - the "name" of the item
+ */
+module.exports.apiCall = async function(configs, groupName, itemName) {
+	let grp = hdrs.find(x => x.name === groupName);
+	let itm = grp.item.find(x => x.name === itemName);
+
+	let reqOptions = itm.request;
+	reqOptions.headers = reqOptions.header;												// postman calls it "header" whereas request wants "headers" 
+	reqOptions.headers.forEach(element => { element.name = element.key; });				// postman calls it "key" whereas request wants "name"
+
+	// *** TO DO parse configs - don't do it this way:
+	reqOptions.headers['x-august-access-token'] = configs.jwt;
+	reqOptions.headers['x-kease-api-key'] = configs.keaseApiKey;
+	reqOptions.headers['x-august-api-key'] = configs.keaseApiKey;
+
+
 };
