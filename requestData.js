@@ -13,17 +13,17 @@ module.exports.getUserApiKey = async function(api, questionFunc) {
 	let phoneNumber = await questionFunc('What is your phone number (format: +15551114444)?');
 	let emailAddress = await questionFunc('What is your email address?');
 	let passwd = await questionFunc('What is your password?');
-	let result = await api.authenticate('phone:' + phoneNumber, passwd);
-	api.updateJwt(result.response.headers['x-august-access-token']);
+	let pResult = await api.authenticate('phone:' + phoneNumber, passwd);
+	api.updateJwt(pResult.response.headers['x-august-access-token']);
 	await api.sendCodeToPhone(phoneNumber);
 	let pCode = questionFunc('A validation code has been requested on your phone - you should get a text message with the code. What is the validation code?');
-	let result = await api.validatePhone(phoneNumber, pCode);
-	api.updateJwt(result.response.headers['x-august-access-token']);
+	let pvResult = await api.validatePhone(phoneNumber, pCode);
+	api.updateJwt(pvResult.response.headers['x-august-access-token']);
 	await api.sendCodeToEmail(emailAddress);
 	let eCode = questionFunc('A validation code has been requested on your email - you should get an email with the code. What is the validation code?');
-	let result = await api.validateEmail(emailAddress, code);
-	api.updateJwt(result.response.headers['x-august-access-token']);		// result.response.headers['x-august-access-token'] should contain our API key!
-	return result.response.headers['x-august-access-token'];
+	let eResult = await api.validateEmail(emailAddress, code);
+	api.updateJwt(eResult.response.headers['x-august-access-token']);		// result.response.headers['x-august-access-token'] should contain our API key!
+	return eResult.response.headers['x-august-access-token'];
 };
 
 /**
