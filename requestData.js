@@ -1,5 +1,5 @@
-const request = require('request');
-const hdrs = require('./augustPostmanCollection.json').item;
+const request = require('request-promise-native');
+const rqsts = require('./requests.json');
 
 module.exports = {};
 
@@ -47,28 +47,26 @@ module.exports.getFirmwareKeys = async function(api) {
 			key: firmware.toString('hex', extraDataStart + 48, extraDataStart + 64)
 		});
 	}
-	return rtn; 
+	return rtn;
 };
 
 /**
- * Call an API from augustPostmanCollection.json
+ * Call an API from requests.json, parsing all config options inside {{mustaches}}
  * 
  * @param {Object} configs - for each {key:value}, replace the key with the value for each bit in augustPostmanCollection.json inside handlebars {{}}
  * @param {string} groupName - the "name" of the group item for the command
  * @param {string} itemName - the "name" of the item
  */
 module.exports.apiCall = async function(configs, groupName, itemName) {
-	let grp = hdrs.find(x => x.name === groupName);
-	let itm = grp.item.find(x => x.name === itemName);
-
-	let reqOptions = itm.request;
-	reqOptions.headers = reqOptions.header;												// postman calls it "header" whereas request wants "headers" 
-	reqOptions.headers.forEach(element => { element.name = element.key; });				// postman calls it "key" whereas request wants "name"
-
-	// *** TO DO parse configs - don't do it this way:
-	reqOptions.headers['x-august-access-token'] = configs.jwt;
-	reqOptions.headers['x-kease-api-key'] = configs.keaseApiKey;
-	reqOptions.headers['x-august-api-key'] = configs.keaseApiKey;
-
-
+	let opts = rqsts[groupName][itemName];
+	let replVals = function(val) {
+		Object.keys(configs).forEach(cfgKey => val.replace('{{' + cfgKey + '}}', '{{' + configs[cfgKey] + '}}'));
+	};
+	Object.keys(opts).forEach(key => {		// iterate the entry in "requests.json" and replace all {{keys}} to become {{values}} from the configs parameter
+		if (typeof opts[key] === 'string') opts[key] = replVals(opts[key]);
+		if (key === 'headers') {
+			opts[key].forEach(i => { opts[key][i]["value"] = replVals(opts[key][i]["value"]); });
+		}  
+	});
+	return await request(opts);
 };
