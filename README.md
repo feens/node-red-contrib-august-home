@@ -1,8 +1,7 @@
 # node-red-contrib-august-home
 Interface for August Home devices, such as the August Smart Locs, for Node-Red. This node connects to the August API, which appears to be mostly undocumented now. Excellent resources in the links below (from which the bulk of the api calls in this project were derived).
 
-*Still under development.*
-Status: Designing and working the basic functionality.
+**Still under development.**
 
 In Node-Red, the input message payload should be a Javascript Object or JSON in the form `{ "group": "Group Name", "name" : "Request Name" }`. Any needed options for the request are set in the node's configuration, but additional one-off options can be passed in with the input data like this:
 ```json
@@ -25,10 +24,7 @@ For example, to call the API to check for firmware updates, the node input could
     }
 }
 ```
-See the `requests.json` file for all of the available commands.
-
-
-The node output message payload will be the body of the resulting response.
+See the `requests.json` file for all of the available commands. The node output message payload will be the body of the resulting API response.
 
 Some Useful References:
 * https://medium.com/@nolanbrown/the-process-of-reverse-engineering-the-august-lock-api-9dbd12ab65cb
