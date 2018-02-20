@@ -20,7 +20,7 @@ For example, to call the API to check for firmware updates, the node input could
 {
     "group": "Lock",
     "name": "Check for firmware updates",
-    options: {
+    "options": {
         "LockId": "12345"
     }
 }
