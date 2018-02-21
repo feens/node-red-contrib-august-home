@@ -59,10 +59,12 @@ module.exports.getFirmwareKeys = async function(api) {
  */
 module.exports.apiCall = async function(configs, groupName, itemName) {
 	let opts = rqsts[groupName][itemName];
+	console.log('initial opts: ' + JSON.stringify(opts));
 	let replVals = function(val) {
 		Object.keys(configs).forEach(cfgKey => val.replace('{{' + cfgKey + '}}', '{{' + configs[cfgKey] + '}}'));
 	};
 	Object.keys(opts).forEach(key => {		// iterate the entry in "requests.json" and replace all {{keys}} to become {{values}} from the configs parameter
+		console.log('iterate key: ' + key + ' -- ' + JSON.stringify(opts[key]));
 		if (typeof opts[key] === 'string') opts[key] = replVals(opts[key]);
 		if (key === 'headers') {
 			opts[key].forEach(i => { i.value = replVals(i.value); });
