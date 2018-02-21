@@ -53,7 +53,7 @@ module.exports.getFirmwareKeys = async function(api) {
 /**
  * Call an API from requests.json, parsing all config options inside {{mustaches}}
  * 
- * @param {Object} configs - for each {key:value}, replace the key with the value for each bit in augustPostmanCollection.json inside handlebars {{}}
+ * @param {Object} configs - for each {key:value}, replace the key with the value for each bit in requests.json inside {{handlebars}}
  * @param {string} groupName - the "name" of the group item for the command
  * @param {string} itemName - the "name" of the item
  */
@@ -63,11 +63,9 @@ module.exports.apiCall = async function(configs, groupName, itemName) {
 		Object.keys(configs).forEach(cfgKey => { val = val.replace('{{' + cfgKey + '}}', configs[cfgKey]) });
 		return val;
 	};
-	Object.keys(opts).forEach(key => {		// iterate the entry in "requests.json" and replace all {{keys}} to become {{values}} from the configs parameter
+	Object.keys(opts).forEach(key => {		// iterate the entry in "requests.json" and replace all {{keys}} to become values from the configs parameter
 		if (typeof opts[key] === 'string') opts[key] = replVals(opts[key]);
-		if (key === 'headers') {
-			opts[key].forEach(i => { i.value = replVals(i.value); });
-		}  
+		if (key === 'headers') opts[key].forEach(i => { i.value = replVals(i.value); });
 	});
 	console.log('request(' + JSON.stringify(opts) + ')');  // for debugging. *** TO-DO: delete
 	return await request(opts);
