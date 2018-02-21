@@ -1,7 +1,7 @@
 {
 	"Airbnb": {
 		"Get Locks": {
-			"url": "https://api-production.august.com/airbnb/listings/{{ListingId}}/locks",
+			"uri": "https://api-production.august.com/airbnb/listings/{{ListingId}}/locks",
 			"method": "GET",
 			"headers": [
 				{
@@ -19,7 +19,7 @@
 			]
 		},
 		"Get Lock": {
-			"url": "https://api-production.august.com/airbnb/listings/{{ListingId}}/locks/{{LockId}}",
+			"uri": "https://api-production.august.com/airbnb/listings/{{ListingId}}/locks/{{LockId}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -37,7 +37,7 @@
 			]
 		},
 		"Authenticate": {
-			"url": "https://api-production.august.com/airbnb/authtoken",
+			"uri": "https://api-production.august.com/airbnb/authtoken",
 			"method": "POST",
 			"headers": [
 				{
@@ -57,7 +57,7 @@
 	},
 	"Authentication": {
 		"Sign-in": {
-			"url": "https://api-production.august.com/session",
+			"uri": "https://api-production.august.com/session",
 			"method": "POST",
 			"headers": [
 				{
@@ -73,7 +73,7 @@
 			"description": "Signs into their api"
 		},
 		"Send password reset email": {
-			"url": "https://api-production.august.com/validation/email",
+			"uri": "https://api-production.august.com/validation/email",
 			"method": "POST",
 			"headers": [
 				{
@@ -93,7 +93,7 @@
 			"description": "Send password reset email"
 		},
 		"Send password reset phone": {
-			"url": "https://api-production.august.com/validation/phone",
+			"uri": "https://api-production.august.com/validation/phone",
 			"method": "POST",
 			"headers": [
 				{
@@ -113,7 +113,7 @@
 			"description": "Send password reset phone"
 		},
 		"Verify Phone": {
-			"url": "https://api-production.august.com/validate/phone",
+			"uri": "https://api-production.august.com/validate/phone",
 			"method": "POST",
 			"headers": [
 				{
@@ -133,7 +133,7 @@
 			"description": "Send code to reset password"
 		},
 		"Force sign out": {
-			"url": "https://api-production.august.com/session/email:{{Email}}",
+			"uri": "https://api-production.august.com/session/email:{{Email}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -152,7 +152,7 @@
 			"description": "Force user to sign out"
 		},
 		"Verify Email": {
-			"url": "https://api-production.august.com/validate/email",
+			"uri": "https://api-production.august.com/validate/email",
 			"method": "POST",
 			"headers": [
 				{
@@ -174,7 +174,7 @@
 	},
 	"Bridge": {
 		"Authenticate": {
-			"url": "https://api-production.august.com/bridges",
+			"uri": "https://api-production.august.com/bridges",
 			"method": "POST",
 			"headers": [
 				{
@@ -194,7 +194,7 @@
 			"description": "Adds a bridge to a lock and retrieves a token which will be used to access the apis."
 		},
 		"Set Status": {
-			"url": "https://api-production.august.com/remoteoperate/{{LockId}}/status",
+			"uri": "https://api-production.august.com/remoteoperate/{{LockId}}/status",
 			"method": "PUT",
 			"headers": [
 				{
@@ -213,7 +213,7 @@
 			"body": "{}"
 		},
 		"Get Notifications": {
-			"url": "https://api-production.august.com/bridges/{{BridgeId}}/notifications",
+			"uri": "https://api-production.august.com/bridges/{{BridgeId}}/notifications",
 			"method": "GET",
 			"headers": [
 				{
@@ -231,7 +231,7 @@
 			]
 		},
 		"Get Manual Lock": {
-			"url": "https://api-production.august.com/locks/notifications/{{LockId}}/manuallock",
+			"uri": "https://api-production.august.com/locks/notifications/{{LockId}}/manuallock",
 			"method": "GET",
 			"headers": [
 				{
@@ -249,7 +249,7 @@
 			]
 		},
 		"Remote Unlock": {
-			"url": "https://api-production.august.com/remoteoperate/{{LockId}}/unlock",
+			"uri": "https://api-production.august.com/remoteoperate/{{LockId}}/unlock",
 			"method": "PUT",
 			"headers": [
 				{
@@ -268,7 +268,7 @@
 			"body": "{}"
 		},
 		"Remote Lock": {
-			"url": "https://api-production.august.com/remoteoperate/{{LockId}}/lock",
+			"uri": "https://api-production.august.com/remoteoperate/{{LockId}}/lock",
 			"method": "PUT",
 			"headers": [
 				{
@@ -287,7 +287,7 @@
 			"body": "{}"
 		},
 		"Delete Bridge": {
-			"url": "https://api-production.august.com/bridges/{{BridgeId}}",
+			"uri": "https://api-production.august.com/bridges/{{BridgeId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -305,12 +305,12 @@
 			]
 		},
 		"Get Firmware": {
-			"url": "http://connect-ota.august.com/update.pkg",
+			"uri": "http://connect-ota.august.com/update.pkg",
 			"method": "GET",
 			"headers": []
 		},
 		"Get Bridge": {
-			"url": "https://api-production.august.com/bridges/{{BridgeId}}",
+			"uri": "https://api-production.august.com/bridges/{{BridgeId}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -328,7 +328,7 @@
 			]
 		},
 		"Get Bridges": {
-			"url": "https://api-production.august.com/users/bridges/mine",
+			"uri": "https://api-production.august.com/users/bridges/mine",
 			"method": "GET",
 			"headers": [
 				{
@@ -347,7 +347,7 @@
 			"description": "Gets my Bridges"
 		},
 		"Enable Offline Notifications": {
-			"url": "https://api-production.august.com/bridges/{{BridgeId}}/notifications/system",
+			"uri": "https://api-production.august.com/bridges/{{BridgeId}}/notifications/system",
 			"method": "POST",
 			"headers": [
 				{
@@ -367,7 +367,7 @@
 	},
 	"Cameras": {
 		"Delete camera": {
-			"url": "https://api-production.august.com/cameras/{{NestcamId}}",
+			"uri": "https://api-production.august.com/cameras/{{NestcamId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -388,7 +388,7 @@
 	"Connect": {
 		"description": "APIs called directly by the connect device or hosted by the connect device.",
 		"SetWifi": {
-			"url": "http://192.168.10.1/secure/network",
+			"uri": "http://192.168.10.1/secure/network",
 			"method": "POST",
 			"headers": [
 				{
@@ -399,7 +399,7 @@
 			"description": "File should be the following JSON object: `{\"ssid\":\"{{SSID}}\",\"security\":7, \"key\":\"{{WiFiPSK}}\"}` encrypted with AES128/CBC/PKCS7 with they key `675d30d06ec68cb5e9bf5d7a794fe51e`. Unsecure networks should use a WiFiPSK of empty string, and a security value of 0.\n\n"
 		},
 		"DeviceInfo": {
-			"url": "http://192.168.10.1/deviceinfo",
+			"uri": "http://192.168.10.1/deviceinfo",
 			"method": "GET",
 			"headers": [
 				{
@@ -413,7 +413,7 @@
 			]
 		},
 		"SetLock": {
-			"url": "http://192.168.10.1/secure/bridge",
+			"uri": "http://192.168.10.1/secure/bridge",
 			"method": "POST",
 			"headers": [
 				{
@@ -424,7 +424,7 @@
 			"body": "{\"bridgeId\":\"{{BridgeId}}\", \"authToken\" : \"{{BridgeAuthToken}}\"}"
 		},
 		"GetBridges": {
-			"url": "https://rbs.august.com/bridges/{{MfgBridgeId}}",
+			"uri": "https://rbs.august.com/bridges/{{MfgBridgeId}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -434,12 +434,12 @@
 			]
 		},
 		"Configured": {
-			"url": "http://192.168.10.1/configured",
+			"uri": "http://192.168.10.1/configured",
 			"method": "POST",
 			"headers": []
 		},
 		"GetOps": {
-			"url": "https://rbs.august.com/lockop/{{BridgeId}}",
+			"uri": "https://rbs.august.com/lockop/{{BridgeId}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -473,7 +473,7 @@
 			]
 		},
 		"NotifyOfConnect": {
-			"url": "https://rbs.august.com/messages/{{LockId}}",
+			"uri": "https://rbs.august.com/messages/{{LockId}}",
 			"method": "POST",
 			"headers": [
 				{
@@ -510,7 +510,7 @@
 	},
 	"Doorbell": {
 		"Get Doorbells": {
-			"url": "https://api-production.august.com/users/doorbells/mine",
+			"uri": "https://api-production.august.com/users/doorbells/mine",
 			"method": "GET",
 			"headers": [
 				{
@@ -529,7 +529,7 @@
 			"description": "Gets my Doorbells"
 		},
 		"Add doorbell": {
-			"url": "https://api-production.august.com/doorbells/{{HouseId}}",
+			"uri": "https://api-production.august.com/doorbells/{{HouseId}}",
 			"method": "POST",
 			"headers": [
 				{
@@ -549,7 +549,7 @@
 			"description": "Add doorbell to house"
 		},
 		"Delete Doorbell": {
-			"url": "https://api-production.august.com/doorbells/{{DoorbellId}}",
+			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -568,7 +568,7 @@
 			"body": "{\n  \"serialNumber\": \"{{DoorbellSn}}\"\n}"
 		},
 		"Get Doorbell": {
-			"url": "https://api-production.august.com/doorbells/{{DoorbellId}}",
+			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -587,7 +587,7 @@
 			"body": "{\n  \"serialNumber\": \"{{DoorbellSn}}\"\n}"
 		},
 		"Video token": {
-			"url": "https://api-production.august.com/doorbells/{{DoorbellId}}/avsession/token",
+			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}/avsession/token",
 			"method": "GET",
 			"headers": [
 				{
@@ -606,7 +606,7 @@
 			"body": "{\n  \"serialNumber\": \"{{DoorbellSn}}\"\n}"
 		},
 		"Add Lock": {
-			"url": "https://api-production.august.com/doorbells/{{DoorbellId}}/lock/{{LockId}}",
+			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}/lock/{{LockId}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -625,7 +625,7 @@
 			"description": "Connects a doorbell to a lock."
 		},
 		"Add Nest Cam": {
-			"url": "https://api-production.august.com/doorbells/{{DoorbellId}}/cameras/{{NestcamId}}",
+			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}/cameras/{{NestcamId}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -644,7 +644,7 @@
 			"description": "Connects a nestcam to a lock."
 		},
 		"Reboot": {
-			"url": "https://api-production.august.com/doorbells/{{DoorbellId}}/reboot",
+			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}/reboot",
 			"method": "PUT",
 			"headers": [
 				{
@@ -664,7 +664,7 @@
 	},
 	"Guest": {
 		"Remove lock user": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/{{GuestUserId}}",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/{{GuestUserId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -683,7 +683,7 @@
 			"body": "{\n  \"Name\": \"<Guest Username>\"\n}"
 		},
 		"Get guestbook": {
-			"url": "https://api-production.august.com/houses/{{HouseId}}/guestbookentries/50/0",
+			"uri": "https://api-production.august.com/houses/{{HouseId}}/guestbookentries/50/0",
 			"method": "GET",
 			"headers": [
 				{
@@ -702,7 +702,7 @@
 			"description": "Gets notes left by your guests."
 		},
 		"Add guest with rule": {
-			"url": "https://api-production.august.com/rules/rulewithuser/{{LockId}}/{{GuestUserId}}",
+			"uri": "https://api-production.august.com/rules/rulewithuser/{{LockId}}/{{GuestUserId}}",
 			"method": "POST",
 			"headers": [
 				{
@@ -722,7 +722,7 @@
 			"description": "Add guest with recurrence rule"
 		},
 		"Add temp guest": {
-			"url": "https://api-production.august.com/rules/rulewithuser/{{LockId}}/{{GuestUserId}}",
+			"uri": "https://api-production.august.com/rules/rulewithuser/{{LockId}}/{{GuestUserId}}",
 			"method": "POST",
 			"headers": [
 				{
@@ -741,7 +741,7 @@
 			"body": "{\n  \"Name\": \"<Guest Name>\",\n  \"endTime\": \"2014-12-20T00:07:36.593Z\",\n  \"startTime\": \"2014-12-20T00:02:36.593Z\"\n  \n}"
 		},
 		"Turn on notifications": {
-			"url": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/both",
+			"uri": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/both",
 			"method": "POST",
 			"headers": [
 				{
@@ -760,7 +760,7 @@
 			"description": "Notifies current user when the specified user interacts the specified lock."
 		},
 		"Turn off notifications": {
-			"url": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/neither",
+			"uri": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/neither",
 			"method": "POST",
 			"headers": [
 				{
@@ -779,7 +779,7 @@
 			"description": "Turn off notifications of a specified user's interactions with a specified lock."
 		},
 		"Add lock user": {
-			"url": "https://api-production.august.com/locks/adduser/{{LockId}}/{{GuestUserId}}/{{UserType}}",
+			"uri": "https://api-production.august.com/locks/adduser/{{LockId}}/{{GuestUserId}}/{{UserType}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -799,7 +799,7 @@
 			"description": "Valid user types are:\n\n* user\n* superuser"
 		},
 		"Turn on lock notifications": {
-			"url": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/lock",
+			"uri": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/lock",
 			"method": "POST",
 			"headers": [
 				{
@@ -818,7 +818,7 @@
 			"description": "Notifies current user when the specified user locks the specified lock."
 		},
 		"Turn on unlock notifications": {
-			"url": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/unlock",
+			"uri": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/unlock",
 			"method": "POST",
 			"headers": [
 				{
@@ -837,7 +837,7 @@
 			"description": "Notifies current user when the specified user unlocks the specified lock."
 		},
 		"Find user by phone": {
-			"url": "https://api-production.august.com/users/phone:{{Phone}}",
+			"uri": "https://api-production.august.com/users/phone:{{Phone}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -855,7 +855,7 @@
 			]
 		},
 		"Find user by email": {
-			"url": "https://api-production.august.com/users/email:{{Email}}",
+			"uri": "https://api-production.august.com/users/email:{{Email}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -873,7 +873,7 @@
 			]
 		},
 		"Delete guest rule": {
-			"url": "https://api-production.august.com/rules/{{RuleId}}",
+			"uri": "https://api-production.august.com/rules/{{RuleId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -893,7 +893,7 @@
 			"description": "Removes a guest access rule."
 		},
 		"Write in guestbook": {
-			"url": "https://api-production.august.com/houses/{{HouseId}}/guestbook",
+			"uri": "https://api-production.august.com/houses/{{HouseId}}/guestbook",
 			"method": "POST",
 			"headers": [
 				{
@@ -912,7 +912,7 @@
 			"body": "{\n    \"content\": \"Are you awake?\"\n}"
 		},
 		"Remove user from rule": {
-			"url": "https://api-production.august.com/rules/{{RuleId}}/{{GuestUserId}}",
+			"uri": "https://api-production.august.com/rules/{{RuleId}}/{{GuestUserId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -930,7 +930,7 @@
 			]
 		},
 		"Add user to rule": {
-			"url": "https://api-production.august.com/rules/{{RuleId}}/{{GuestUserId}}",
+			"uri": "https://api-production.august.com/rules/{{RuleId}}/{{GuestUserId}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -948,7 +948,7 @@
 			]
 		},
 		"Tell august about a nonuser": {
-			"url": "https://api-production.august.com/unverifiedusers/{{GuestUserId}}",
+			"uri": "https://api-production.august.com/unverifiedusers/{{GuestUserId}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -970,7 +970,7 @@
 	},
 	"Houses": {
 		"Get Houses": {
-			"url": "https://api-production.august.com/users/houses/mine",
+			"uri": "https://api-production.august.com/users/houses/mine",
 			"method": "GET",
 			"headers": [
 				{
@@ -989,7 +989,7 @@
 			"description": "Gets my houses"
 		},
 		"Get House": {
-			"url": "https://api-production.august.com/houses/{{HouseId}}",
+			"uri": "https://api-production.august.com/houses/{{HouseId}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -1008,7 +1008,7 @@
 			"description": "Gets single house"
 		},
 		"Delete house": {
-			"url": "https://api-production.august.com/houses/{{HouseId}}",
+			"uri": "https://api-production.august.com/houses/{{HouseId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -1026,7 +1026,7 @@
 			]
 		},
 		"Create house": {
-			"url": "https://api-production.august.com/houses/",
+			"uri": "https://api-production.august.com/houses/",
 			"method": "POST",
 			"headers": [
 				{
@@ -1046,7 +1046,7 @@
 			"description": "Create a new house"
 		},
 		"Update House": {
-			"url": "https://api-production.august.com/houses/{{HouseId}}",
+			"uri": "https://api-production.august.com/houses/{{HouseId}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1065,7 +1065,7 @@
 			"body": "{\n  \"Apartment\":\"000001\",\n  \"City\":\"Farse town\",\n  \"HouseName\":\"Lair 1\",\n  \"PostalCode\":\"\",\n  \"State\":\"\",\n  \"Street\":\"\"\n}"
 		},
 		"Get House Temperature": {
-			"url": "https://api-production.august.com/houses/{{HouseId}}/temperature",
+			"uri": "https://api-production.august.com/houses/{{HouseId}}/temperature",
 			"method": "GET",
 			"headers": [
 				{
@@ -1084,7 +1084,7 @@
 			"description": "Not sure what this does yet."
 		},
 		"Update House image": {
-			"url": "https://api-production.august.com/houses/{{HouseId}}/image",
+			"uri": "https://api-production.august.com/houses/{{HouseId}}/image",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1104,7 +1104,7 @@
 	},
 	"Keypad": {
 		"Keypad Check": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/firmware/keypadcheck",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/keypadcheck",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1123,7 +1123,7 @@
 			"description": "Checks to see if lock's firmware supports keypads."
 		},
 		"Generate Pin": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/pin",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/pin",
 			"method": "GET",
 			"headers": [
 				{
@@ -1142,7 +1142,7 @@
 			"description": "Get Pin. It appears august generates pin codes on their webserver."
 		},
 		"Get Firmware": {
-			"url": "https://production.august.com/keypads/firmware/{{KeypadId}}/1.75.4",
+			"uri": "https://production.august.com/keypads/firmware/{{KeypadId}}/1.75.4",
 			"method": "GET",
 			"headers": [
 				{
@@ -1161,7 +1161,7 @@
 			"description": "Download Keypad Firmware"
 		},
 		"Get offline Keys": {
-			"url": "https://production.august.com/keypads/{{KeypadId}}/{{LockId}}/offlinekey",
+			"uri": "https://production.august.com/keypads/{{KeypadId}}/{{LockId}}/offlinekey",
 			"method": "GET",
 			"headers": [
 				{
@@ -1179,7 +1179,7 @@
 			]
 		},
 		"Add keypad": {
-			"url": "https://production.august.com/keypads",
+			"uri": "https://production.august.com/keypads",
 			"method": "POST",
 			"headers": [
 				{
@@ -1199,7 +1199,7 @@
 			"description": "Add keypad to lock"
 		},
 		"Delete Keypad": {
-			"url": "https://production.august.com/keypads/{{KeypadId}}",
+			"uri": "https://production.august.com/keypads/{{KeypadId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -1217,7 +1217,7 @@
 			]
 		},
 		"Get pins": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/pins",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/pins",
 			"method": "GET",
 			"headers": [
 				{
@@ -1236,7 +1236,7 @@
 			"description": "Get all current pins"
 		},
 		"Get keypad": {
-			"url": "https://production.august.com/keypads/{{KeypadId}}",
+			"uri": "https://production.august.com/keypads/{{KeypadId}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -1254,7 +1254,7 @@
 			]
 		},
 		"Get code": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/code",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/code",
 			"method": "GET",
 			"headers": [
 				{
@@ -1274,7 +1274,7 @@
 	},
 	"Lock": {
 		"Get Locks": {
-			"url": "https://api-production.august.com/users/locks/mine",
+			"uri": "https://api-production.august.com/users/locks/mine",
 			"method": "GET",
 			"headers": [
 				{
@@ -1293,7 +1293,7 @@
 			"description": "Gets my locks"
 		},
 		"Get Lock": {
-			"url": "https://api-production.august.com/locks/{{LockId}}",
+			"uri": "https://api-production.august.com/locks/{{LockId}}",
 			"method": "GET",
 			"headers": [
 				{
@@ -1312,7 +1312,7 @@
 			"description": "Gets single lock"
 		},
 		"Delete lock": {
-			"url": "https://api-production.august.com/locks/{{LockId}}",
+			"uri": "https://api-production.august.com/locks/{{LockId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -1331,7 +1331,7 @@
 			"description": "This is done when you reset a lock to factory default."
 		},
 		"Assign lock to door": {
-			"url": "https://api-production.august.com/locks/{{HouseId}}",
+			"uri": "https://api-production.august.com/locks/{{HouseId}}",
 			"method": "POST",
 			"headers": [
 				{
@@ -1351,7 +1351,7 @@
 			"description": "Assigns a lock to a door."
 		},
 		"Initiate comms": {
-			"url": "https://api-production.august.com/locks/initiatecomm/{{LockId}}",
+			"uri": "https://api-production.august.com/locks/initiatecomm/{{LockId}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1371,7 +1371,7 @@
 			"description": "Use the passed in values to generate a packet encrypted with the lock's firmware key containing the half of the session key selected by the phone."
 		},
 		"Initiate comms pt2": {
-			"url": "https://api-production.august.com/locks/getlockrands/{{LockId}}",
+			"uri": "https://api-production.august.com/locks/getlockrands/{{LockId}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1391,7 +1391,7 @@
 			"description": "Decrypts the lock's repsonse to initiate comms packet. Response will contain the half of the session key which was selected by the lock."
 		},
 		"Check for firmware updates": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/firmware/788113bb-undefined-0.4.2",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/788113bb-undefined-0.4.2",
 			"method": "GET",
 			"headers": [
 				{
@@ -1410,7 +1410,7 @@
 			"description": "Check for firmware updates"
 		},
 		"Download arm firmware updates": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/firmware/arm/1.0.80",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/arm/1.0.80",
 			"method": "GET",
 			"headers": [
 				{
@@ -1428,7 +1428,7 @@
 			]
 		},
 		"Download ti firmware updates": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/firmware/ti/1.1.18",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/ti/1.1.18",
 			"method": "GET",
 			"headers": [
 				{
@@ -1446,7 +1446,7 @@
 			]
 		},
 		"Download st firmware updates": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/firmware/st/2.1.47",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/st/2.1.47",
 			"method": "GET",
 			"headers": [
 				{
@@ -1464,7 +1464,7 @@
 			]
 		},
 		"Download bcm firmware updates": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/firmware/bcm/2.1.47",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/bcm/2.1.47",
 			"method": "GET",
 			"headers": [
 				{
@@ -1482,7 +1482,7 @@
 			]
 		},
 		"Set Timezone": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/timezone",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/timezone",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1502,7 +1502,7 @@
 			"description": "Set lock's timezone"
 		},
 		"Set TimeAdjustment": {
-			"url": "https://api-production.august.com/locks/timeadustment/{{LockId}}/1465912555/1",
+			"uri": "https://api-production.august.com/locks/timeadustment/{{LockId}}/1465912555/1",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1522,7 +1522,7 @@
 			"description": "url ends with: oldtime/newtime"
 		},
 		"Add Nest Cam": {
-			"url": "https://api-production.august.com/locks/cameras/{{LockId}}/{{NestcamId}}",
+			"uri": "https://api-production.august.com/locks/cameras/{{LockId}}/{{NestcamId}}",
 			"method": "POST",
 			"headers": [
 				{
@@ -1541,7 +1541,7 @@
 			"description": "Connects a nestcam to a lock."
 		},
 		"Tell August all params have been set": {
-			"url": "https://api-production.august.com/locks/acknowledgeparamupdate/{{LockId}}",
+			"uri": "https://api-production.august.com/locks/acknowledgeparamupdate/{{LockId}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1560,7 +1560,7 @@
 			"body": "{\n  \"zone\": \"America/Chicago\"\n}"
 		},
 		"Remove camera": {
-			"url": "https://api-production.august.com/locks/cameras/{{LockId}}/{{NestcamId}}",
+			"uri": "https://api-production.august.com/locks/cameras/{{LockId}}/{{NestcamId}}",
 			"method": "DELETE",
 			"headers": [
 				{
@@ -1578,7 +1578,7 @@
 			]
 		},
 		"Sync pins": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/pins/sync",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/pins/sync",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1596,7 +1596,7 @@
 			]
 		},
 		"Set pin for user": {
-			"url": "https://api-production.august.com/locks/{{LockId}}/users/{{UserId}}/pin",
+			"uri": "https://api-production.august.com/locks/{{LockId}}/users/{{UserId}}/pin",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1618,7 +1618,7 @@
 	},
 	"Logging": {
 		"Log Action 1": {
-			"url": "https://api-production.august.com/locks/usage/{{LockId}}",
+			"uri": "https://api-production.august.com/locks/usage/{{LockId}}",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1638,7 +1638,7 @@
 			"description": "Logs actions performed on the lock.\n\nExample actions:\n\n* unlock\n* lock"
 		},
 		"Send lock data to august": {
-			"url": "https://api-production.august.com/locks/log/{{LockId}}/lockdata",
+			"uri": "https://api-production.august.com/locks/log/{{LockId}}/lockdata",
 			"method": "POST",
 			"headers": [
 				{
@@ -1658,7 +1658,7 @@
 			"description": "Send lock data to august"
 		},
 		"[Obsolete] Send usage": {
-			"url": "https://api-production.august.com/locks/log/{{LockId}}/lockoperatedata",
+			"uri": "https://api-production.august.com/locks/log/{{LockId}}/lockoperatedata",
 			"method": "POST",
 			"headers": [
 				{
@@ -1678,7 +1678,7 @@
 			"description": "Send data about requests to the lock"
 		},
 		"Get Logs": {
-			"url": "https://api-production.august.com/locks/log/before/{{LockId}}/1588871355091/200",
+			"uri": "https://api-production.august.com/locks/log/before/{{LockId}}/1588871355091/200",
 			"method": "GET",
 			"headers": [
 				{
@@ -1697,7 +1697,7 @@
 			"description": "Get logs"
 		},
 		"Log action 2": {
-			"url": "https://api-production.august.com/locks/log/{{LockId}}/{{action}}",
+			"uri": "https://api-production.august.com/locks/log/{{LockId}}/{{action}}",
 			"method": "POST",
 			"headers": [
 				{
@@ -1720,7 +1720,7 @@
 	"Misc": {
 		"description": "APIs which are difficult to categorize, or have not yet been categorized.",
 		"Add apns": {
-			"url": "https://api-production.august.com/apns/devtoken",
+			"uri": "https://api-production.august.com/apns/devtoken",
 			"method": "POST",
 			"headers": [
 				{
@@ -1740,7 +1740,7 @@
 			"description": "This api has something to do with https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html but I have not drilled into it yet."
 		},
 		"Check App Version": {
-			"url": "https://api-production.august.com/augustappversionok/ios/2.1.62",
+			"uri": "https://api-production.august.com/augustappversionok/ios/2.1.62",
 			"method": "GET",
 			"headers": [
 				{
@@ -1759,7 +1759,7 @@
 			"description": "Is this up to date?"
 		},
 		"Legal info": {
-			"url": "https://api-production.august.com/users/me/legal",
+			"uri": "https://api-production.august.com/users/me/legal",
 			"method": "GET",
 			"headers": [
 				{
@@ -1778,7 +1778,7 @@
 			"description": "Checks to see if August wants user to view any documents."
 		},
 		"Partners": {
-			"url": "https://api-production.august.com/partners",
+			"uri": "https://api-production.august.com/partners",
 			"method": "GET",
 			"headers": [
 				{
@@ -1796,7 +1796,7 @@
 			]
 		},
 		"Have partners send me spam": {
-			"url": "https://api-production.august.com/partners/{{PartnerId}}/mailinglist",
+			"uri": "https://api-production.august.com/partners/{{PartnerId}}/mailinglist",
 			"method": "POST",
 			"headers": [
 				{
@@ -1817,7 +1817,7 @@
 	},
 	"Profile": {
 		"Get Profile": {
-			"url": "https://api-production.august.com/users/me",
+			"uri": "https://api-production.august.com/users/me",
 			"method": "GET",
 			"headers": [
 				{
@@ -1836,7 +1836,7 @@
 			"description": "Gets my profile"
 		},
 		"Change password": {
-			"url": "https://api-production.august.com/users",
+			"uri": "https://api-production.august.com/users",
 			"method": "PUT",
 			"headers": [
 				{
@@ -1856,7 +1856,7 @@
 			"description": "Change password"
 		},
 		"Change Profile": {
-			"url": "https://api-production.august.com/users",
+			"uri": "https://api-production.august.com/users",
 			"method": "PUT",
 			"headers": [
 				{
