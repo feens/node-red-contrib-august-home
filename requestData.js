@@ -68,5 +68,6 @@ module.exports.apiCall = async function(configs, groupName, itemName) {
 			opts[key].forEach(i => { i.value = replVals(i.value); });
 		}  
 	});
+	console.log(JSON.stringify(opts));
 	return await request(opts);
 };
