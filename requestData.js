@@ -65,7 +65,7 @@ module.exports.apiCall = async function(configs, groupName, itemName) {
 	Object.keys(opts).forEach(key => {		// iterate the entry in "requests.json" and replace all {{keys}} to become {{values}} from the configs parameter
 		if (typeof opts[key] === 'string') opts[key] = replVals(opts[key]);
 		if (key === 'headers') {
-			opts[key].forEach(i => { opts[key][i]["value"] = replVals(opts[key][i]["value"]); });
+			opts[key].forEach(i => { i.value = replVals(i.value); });
 		}  
 	});
 	return await request(opts);
