@@ -24,7 +24,7 @@ For example, to call the API to check for firmware updates, the node input could
     }
 }
 ```
-See the `requests.json` file for all of the available commands that [jmaxx](https://github.com/jmaxxz/) has discovered in his project (copied directly into this module). The node output message payload will be the body of the resulting API response.
+See the `requests.json` file for all of the available commands that [jmaxxz](https://github.com/jmaxxz/) has discovered in his project (copied directly into this module). The node output message payload will be the body of the resulting API response.
 
 Some Useful References:
 * https://medium.com/@nolanbrown/the-process-of-reverse-engineering-the-august-lock-api-9dbd12ab65cb
