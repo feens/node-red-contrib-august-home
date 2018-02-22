@@ -3,171 +3,93 @@
 		"Get Locks": {
 			"uri": "https://api-production.august.com/airbnb/listings/{{ListingId}}/locks",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Get Lock": {
 			"uri": "https://api-production.august.com/airbnb/listings/{{ListingId}}/locks/{{LockId}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Authenticate": {
 			"uri": "https://api-production.august.com/airbnb/authtoken",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		}
 	},
 	"Authentication": {
 		"Sign-in": {
 			"uri": "https://api-production.august.com/session",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			},
 			"body": "{\n  \"identifier\":\"phone:{{Phone}}\",\n  \"installId\":\"0\",\n  \"password\":\"{{Password}}\"\n}",
 			"description": "Signs into their api"
 		},
 		"Send password reset email": {
 			"uri": "https://api-production.august.com/validation/email",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \n  \"value\":\"{{Email}}\"\n}",
 			"description": "Send password reset email"
 		},
 		"Send password reset phone": {
 			"uri": "https://api-production.august.com/validation/phone",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \n  \"value\":\"{{Phone}}\"\n}",
 			"description": "Send password reset phone"
 		},
 		"Verify Phone": {
 			"uri": "https://api-production.august.com/validate/phone",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"code\":\"000000\",\n  \"phone\":\"{{Phone}}\"\n}",
 			"description": "Send code to reset password"
 		},
 		"Force sign out": {
 			"uri": "https://api-production.august.com/session/email:{{Email}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Force user to sign out"
 		},
 		"Verify Email": {
 			"uri": "https://api-production.august.com/validate/email",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"code\":\"000000\",\n  \n  \"email\":\"{{Email}}\"\n}",
 			"description": "Send code to reset password"
 		}
@@ -176,133 +98,70 @@
 		"Authenticate": {
 			"uri": "https://api-production.august.com/bridges",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			},
 			"body": "{\n  \"LockID\": \"{{LockId}}\",\n  \"mfgBridgeID\": \"{{MfgBridgeId}}\"\n}",
 			"description": "Adds a bridge to a lock and retrieves a token which will be used to access the apis."
 		},
 		"Set Status": {
 			"uri": "https://api-production.august.com/remoteoperate/{{LockId}}/status",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			},
 			"body": "{}"
 		},
 		"Get Notifications": {
 			"uri": "https://api-production.august.com/bridges/{{BridgeId}}/notifications",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			}
 		},
 		"Get Manual Lock": {
 			"uri": "https://api-production.august.com/locks/notifications/{{LockId}}/manuallock",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			}
 		},
 		"Remote Unlock": {
 			"uri": "https://api-production.august.com/remoteoperate/{{LockId}}/unlock",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			},
 			"body": "{}"
 		},
 		"Remote Lock": {
 			"uri": "https://api-production.august.com/remoteoperate/{{LockId}}/lock",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			},
 			"body": "{}"
 		},
 		"Delete Bridge": {
 			"uri": "https://api-production.august.com/bridges/{{BridgeId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			}
 		},
 		"Get Firmware": {
 			"uri": "http://connect-ota.august.com/update.pkg",
@@ -312,77 +171,41 @@
 		"Get Bridge": {
 			"uri": "https://api-production.august.com/bridges/{{BridgeId}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			}
 		},
 		"Get Bridges": {
 			"uri": "https://api-production.august.com/users/bridges/mine",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Gets my Bridges"
 		},
 		"Enable Offline Notifications": {
 			"uri": "https://api-production.august.com/bridges/{{BridgeId}}/notifications/system",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			}
 		}
 	},
 	"Cameras": {
 		"Delete camera": {
 			"uri": "https://api-production.august.com/cameras/{{NestcamId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			}
 		}
 	},
 	"Connect": {
@@ -390,48 +213,33 @@
 		"SetWifi": {
 			"uri": "http://192.168.10.1/secure/network",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/octet-stream"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/octet-stream"
+			},
 			"description": "File should be the following JSON object: `{\"ssid\":\"{{SSID}}\",\"security\":7, \"key\":\"{{WiFiPSK}}\"}` encrypted with AES128/CBC/PKCS7 with they key `675d30d06ec68cb5e9bf5d7a794fe51e`. Unsecure networks should use a WiFiPSK of empty string, and a security value of 0.\n\n"
 		},
 		"DeviceInfo": {
 			"uri": "http://192.168.10.1/deviceinfo",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-device",
-					"value": "connect"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-device": "connect"
+			}
 		},
 		"SetLock": {
 			"uri": "http://192.168.10.1/secure/bridge",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json"
+			},
 			"body": "{\"bridgeId\":\"{{BridgeId}}\", \"authToken\" : \"{{BridgeAuthToken}}\"}"
 		},
 		"GetBridges": {
 			"uri": "https://rbs.august.com/bridges/{{MfgBridgeId}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "x-device",
-					"value": "connect"
-				}
-			]
+			"headers": {
+				"x-device": "connect"
+			}
 		},
 		"Configured": {
 			"uri": "http://192.168.10.1/configured",
@@ -441,70 +249,28 @@
 		"GetOps": {
 			"uri": "https://rbs.august.com/lockop/{{BridgeId}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "x-device",
-					"value": "connect"
-				},
-				{
-					"name": "x-august-bridge-auth-token",
-					"value": "{{BridgeAuthToken}}"
-				},
-				{
-					"name": "bridge-firmware-version",
-					"value": "2.0.54-3"
-				},
-				{
-					"name": "bridge-wlan-rssi",
-					"value": "-36"
-				},
-				{
-					"name": "bridge-wlan-snr",
-					"value": "57"
-				},
-				{
-					"name": "Accept-Encoding",
-					"value": "identity"
-				},
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				}
-			]
+			"headers": {
+				"x-device": "connect",
+				"x-august-bridge-auth-token": "{{BridgeAuthToken}}",
+				"bridge-firmware-version": "2.0.54-3",
+				"bridge-wlan-rssi": "-36",
+				"bridge-wlan-snr": "57",
+				"Accept-Encoding": "identity",
+				"Content-Type": "application/json"
+			}
 		},
 		"NotifyOfConnect": {
 			"uri": "https://rbs.august.com/messages/{{LockId}}",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "x-device",
-					"value": "connect"
-				},
-				{
-					"name": "x-august-bridge-auth-token",
-					"value": "{{BridgeAuthToken}}"
-				},
-				{
-					"name": "bridge-firmware-version",
-					"value": "2.0.54-3"
-				},
-				{
-					"name": "bridge-wlan-rssi",
-					"value": "-36"
-				},
-				{
-					"name": "bridge-wlan-snr",
-					"value": "57"
-				},
-				{
-					"name": "Accept-Encoding",
-					"value": "identity"
-				},
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				}
-			],
+			"headers": {
+				"x-device": "connect",
+				"x-august-bridge-auth-token": "{{BridgeAuthToken}}",
+				"bridge-firmware-version": "2.0.54-3",
+				"bridge-wlan-rssi": "-36",
+				"bridge-wlan-snr": "57",
+				"Accept-Encoding": "identity",
+				"Content-Type": "application/json"
+			},
 			"body": "{\n    \"event\": \"connectionState\",\n    \"lockID\": \"{{LockId}}\",\n    \"rssi\": -57,\n    \"state\": \"connected\"\n}"
 		}
 	},
@@ -512,458 +278,242 @@
 		"Get Doorbells": {
 			"uri": "https://api-production.august.com/users/doorbells/mine",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Gets my Doorbells"
 		},
 		"Add doorbell": {
 			"uri": "https://api-production.august.com/doorbells/{{HouseId}}",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"serialNumber\": \"{{DoorbellSn}}\"\n}",
 			"description": "Add doorbell to house"
 		},
 		"Delete Doorbell": {
 			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"serialNumber\": \"{{DoorbellSn}}\"\n}"
 		},
 		"Get Doorbell": {
 			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"serialNumber\": \"{{DoorbellSn}}\"\n}"
 		},
 		"Video token": {
 			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}/avsession/token",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"serialNumber\": \"{{DoorbellSn}}\"\n}"
 		},
 		"Add Lock": {
 			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}/lock/{{LockId}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Connects a doorbell to a lock."
 		},
 		"Add Nest Cam": {
 			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}/cameras/{{NestcamId}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Connects a nestcam to a lock."
 		},
 		"Reboot": {
 			"uri": "https://api-production.august.com/doorbells/{{DoorbellId}}/reboot",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		}
 	},
 	"Guest": {
 		"Remove lock user": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/{{GuestUserId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"Name\": \"<Guest Username>\"\n}"
 		},
 		"Get guestbook": {
 			"uri": "https://api-production.august.com/houses/{{HouseId}}/guestbookentries/50/0",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Gets notes left by your guests."
 		},
 		"Add guest with rule": {
 			"uri": "https://api-production.august.com/rules/rulewithuser/{{LockId}}/{{GuestUserId}}",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"Name\": \"<Guest Name>\",\n  \"recurrence\": \"FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR\",\n  \"startTime\": \"2014-12-20T00:07:00.0Z\",\n  \"endTime\": \"2014-12-20T02:07:00.0Z\"\n}",
 			"description": "Add guest with recurrence rule"
 		},
 		"Add temp guest": {
 			"uri": "https://api-production.august.com/rules/rulewithuser/{{LockId}}/{{GuestUserId}}",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"Name\": \"<Guest Name>\",\n  \"endTime\": \"2014-12-20T00:07:36.593Z\",\n  \"startTime\": \"2014-12-20T00:02:36.593Z\"\n  \n}"
 		},
 		"Turn on notifications": {
 			"uri": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/both",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Notifies current user when the specified user interacts the specified lock."
 		},
 		"Turn off notifications": {
 			"uri": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/neither",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Turn off notifications of a specified user's interactions with a specified lock."
 		},
 		"Add lock user": {
 			"uri": "https://api-production.august.com/locks/adduser/{{LockId}}/{{GuestUserId}}/{{UserType}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"Name\": \"<Guest Name>\"\n}",
 			"description": "Valid user types are:\n\n* user\n* superuser"
 		},
 		"Turn on lock notifications": {
 			"uri": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/lock",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Notifies current user when the specified user locks the specified lock."
 		},
 		"Turn on unlock notifications": {
 			"uri": "https://api-production.august.com/locks/setnotification/{{LockId}}/{{GuestUserId}}/unlock",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Notifies current user when the specified user unlocks the specified lock."
 		},
 		"Find user by phone": {
 			"uri": "https://api-production.august.com/users/phone:{{Phone}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Find user by email": {
 			"uri": "https://api-production.august.com/users/email:{{Email}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Delete guest rule": {
 			"uri": "https://api-production.august.com/rules/{{RuleId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"Name\": \"<Guest Name>\",\n  \"endTime\": \"2014-12-20T00:07:36.593Z\",\n  \"startTime\": \"2014-12-20T00:02:36.593Z\"\n  \n}",
 			"description": "Removes a guest access rule."
 		},
 		"Write in guestbook": {
 			"uri": "https://api-production.august.com/houses/{{HouseId}}/guestbook",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n    \"content\": \"Are you awake?\"\n}"
 		},
 		"Remove user from rule": {
 			"uri": "https://api-production.august.com/rules/{{RuleId}}/{{GuestUserId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Add user to rule": {
 			"uri": "https://api-production.august.com/rules/{{RuleId}}/{{GuestUserId}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Tell august about a nonuser": {
 			"uri": "https://api-production.august.com/unverifiedusers/{{GuestUserId}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n    \"lockID\": \"{{LockId}}\",\n    \"firstName\": \"Example\",\n    \"lastName\": \"Smith\"\n}\n",
 			"description": "Tell august the name of one of your guests."
 		}
@@ -972,646 +522,340 @@
 		"Get Houses": {
 			"uri": "https://api-production.august.com/users/houses/mine",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Gets my houses"
 		},
 		"Get House": {
 			"uri": "https://api-production.august.com/houses/{{HouseId}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Gets single house"
 		},
 		"Delete house": {
 			"uri": "https://api-production.august.com/houses/{{HouseId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Create house": {
 			"uri": "https://api-production.august.com/houses/",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"Apartment\":\"000001\",\n  \"City\":\"Farse town\",\n  \"HouseName\":\"Lair 1\",\n  \"PostalCode\":\"\",\n  \"State\":\"\",\n  \"Street\":\"\"\n}",
 			"description": "Create a new house"
 		},
 		"Update House": {
 			"uri": "https://api-production.august.com/houses/{{HouseId}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"Apartment\":\"000001\",\n  \"City\":\"Farse town\",\n  \"HouseName\":\"Lair 1\",\n  \"PostalCode\":\"\",\n  \"State\":\"\",\n  \"Street\":\"\"\n}"
 		},
 		"Get House Temperature": {
 			"uri": "https://api-production.august.com/houses/{{HouseId}}/temperature",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Not sure what this does yet."
 		},
 		"Update House image": {
 			"uri": "https://api-production.august.com/houses/{{HouseId}}/image",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		}
 	},
 	"Keypad": {
 		"Keypad Check": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/keypadcheck",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Checks to see if lock's firmware supports keypads."
 		},
 		"Generate Pin": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/pin",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Get Pin. It appears august generates pin codes on their webserver."
 		},
 		"Get Firmware": {
 			"uri": "https://production.august.com/keypads/firmware/{{KeypadId}}/1.75.4",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Download Keypad Firmware"
 		},
 		"Get offline Keys": {
 			"uri": "https://production.august.com/keypads/{{KeypadId}}/{{LockId}}/offlinekey",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Add keypad": {
 			"uri": "https://production.august.com/keypads",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n    \"lockID\": \"{{LockId}}\", \n    \"serialNumber\": \"{{KeypadSn}}\", \n    \"supportsEncryption\": true\n}\n",
 			"description": "Add keypad to lock"
 		},
 		"Delete Keypad": {
 			"uri": "https://production.august.com/keypads/{{KeypadId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Get pins": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/pins",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Get all current pins"
 		},
 		"Get keypad": {
 			"uri": "https://production.august.com/keypads/{{KeypadId}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Get code": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/code",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		}
 	},
 	"Lock": {
 		"Get Locks": {
 			"uri": "https://api-production.august.com/users/locks/mine",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Gets my locks"
 		},
 		"Get Lock": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Gets single lock"
 		},
 		"Delete lock": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "This is done when you reset a lock to factory default."
 		},
 		"Assign lock to door": {
 			"uri": "https://api-production.august.com/locks/{{HouseId}}",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"LockID\": \"{{LockId}}\",\n  \"LockName\": \"Front Door\",\n  \"Type\": \"1\"\n}",
 			"description": "Assigns a lock to a door."
 		},
 		"Initiate comms": {
 			"uri": "https://api-production.august.com/locks/initiatecomm/{{LockId}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"mRand1\": 3520119842,\n  \"mRand2\": 3747291834\n}",
 			"description": "Use the passed in values to generate a packet encrypted with the lock's firmware key containing the half of the session key selected by the phone."
 		},
 		"Initiate comms pt2": {
 			"uri": "https://api-production.august.com/locks/getlockrands/{{LockId}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"LockResponse\": \"0c1611567c319894cbec3f0e6e2cba0f0f00\"\n}",
 			"description": "Decrypts the lock's repsonse to initiate comms packet. Response will contain the half of the session key which was selected by the lock."
 		},
 		"Check for firmware updates": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/788113bb-undefined-0.4.2",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Check for firmware updates"
 		},
 		"Download arm firmware updates": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/arm/1.0.80",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Download ti firmware updates": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/ti/1.1.18",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Download st firmware updates": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/st/2.1.47",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Download bcm firmware updates": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/firmware/bcm/2.1.47",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Set Timezone": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/timezone",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"zone\": \"America/Chicago\"\n}",
 			"description": "Set lock's timezone"
 		},
 		"Set TimeAdjustment": {
 			"uri": "https://api-production.august.com/locks/timeadustment/{{LockId}}/1465912555/1",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"zone\": \"America/Chicago\"\n}",
 			"description": "url ends with: oldtime/newtime"
 		},
 		"Add Nest Cam": {
 			"uri": "https://api-production.august.com/locks/cameras/{{LockId}}/{{NestcamId}}",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Connects a nestcam to a lock."
 		},
 		"Tell August all params have been set": {
 			"uri": "https://api-production.august.com/locks/acknowledgeparamupdate/{{LockId}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"zone\": \"America/Chicago\"\n}"
 		},
 		"Remove camera": {
 			"uri": "https://api-production.august.com/locks/cameras/{{LockId}}/{{NestcamId}}",
 			"method": "DELETE",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			}
 		},
 		"Sync pins": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/pins/sync",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Set pin for user": {
 			"uri": "https://api-production.august.com/locks/{{LockId}}/users/{{UserId}}/pin",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n\n}",
 			"description": "TODO: figure out body"
 		}
@@ -1620,99 +864,54 @@
 		"Log Action 1": {
 			"uri": "https://api-production.august.com/locks/usage/{{LockId}}",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"action\":\"lock\",\n  \"crypto\":\"success\",\n  \"mechanical\":\"success\"\n}",
 			"description": "Logs actions performed on the lock.\n\nExample actions:\n\n* unlock\n* lock"
 		},
 		"Send lock data to august": {
 			"uri": "https://api-production.august.com/locks/log/{{LockId}}/lockdata",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n    \"LockEventPacket0\":{\n    \"RSSI[0]\":-35,\n    \"RSSI[1]\":-34,\n    \"RSSI[2]\":-33,\n    \"RSSI[3]\":-34,\n    \"RSSI[4]\":-33,\n    \"currentLockState\":\"kAugLockState_UnknownStaticPosition\",\n    \"opCode\":\"Op_DoorManualStateChange\",\n \"timeStamp\":\"1418871177\"\n  },\n  \"LockEventPacket1\":{\n    \"coulombCounter\":\"277248 uC\",\n    \"currentAngularPosition\":\"53707\",\n    \"currentSamples[0]\":\"unused\",\n \"currentSamples[1]\":\"unused\",\n \"targetAngularPosition\":\"8408\"\n  },\n    \"LockEventPacket2\":{\n \"currentSamples[2]\":\"unused\",\n    \"currentSamples[3]\":\"unused\",\n    \"currentSamples[4]\":\"unused\",\n    \"currentSamples[5]\":\"unused\",\n    \"currentSamples[6]\":\"unused\",\n    \"currentSamples[7]\":\"unused\"\n  },\n  \"LockEventPacket3\": {\n    \"batteryLevel\": \"6237 mV\",\n    \"currentSampleBackoff\": \"65535 mA\",\n    \"currentSamples[7]\": \"unused\",\n    \"currentSamples[8]\": \"unused\"\n  }\n}",
 			"description": "Send lock data to august"
 		},
 		"[Obsolete] Send usage": {
 			"uri": "https://api-production.august.com/locks/log/{{LockId}}/lockoperatedata",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"ID\": \"A143DACD-DC8A-40C2-8D5B-DADDAA1E6C124\",\n  \"lockStateResponse\": \"141871192232.231\"\n}",
 			"description": "Send data about requests to the lock"
 		},
 		"Get Logs": {
 			"uri": "https://api-production.august.com/locks/log/before/{{LockId}}/1588871355091/200",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Get logs"
 		},
 		"Log action 2": {
 			"uri": "https://api-production.august.com/locks/log/{{LockId}}/{{action}}",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n\n}",
 			"description": "Logs actions performed on the lock.\n\nExample actions:\n\n* unlock\n* lock"
 		}
@@ -1722,96 +921,51 @@
 		"Add apns": {
 			"uri": "https://api-production.august.com/apns/devtoken",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n    \"apnstoken\":\"gcm:123456\"\n}",
 			"description": "This api has something to do with https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html but I have not drilled into it yet."
 		},
 		"Check App Version": {
 			"uri": "https://api-production.august.com/augustappversionok/ios/2.1.62",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-access-token": "{{ApiKey}}",
+				"x-august-api-key": "{{KeaseApiKey}}"
+			},
 			"description": "Is this up to date?"
 		},
 		"Legal info": {
 			"uri": "https://api-production.august.com/users/me/legal",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Checks to see if August wants user to view any documents."
 		},
 		"Partners": {
 			"uri": "https://api-production.august.com/partners",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			]
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			}
 		},
 		"Have partners send me spam": {
 			"uri": "https://api-production.august.com/partners/{{PartnerId}}/mailinglist",
 			"method": "POST",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"email\":\"{{Email}}\"\n}"
 		}
 	},
@@ -1819,59 +973,32 @@
 		"Get Profile": {
 			"uri": "https://api-production.august.com/users/me",
 			"method": "GET",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"description": "Gets my profile"
 		},
 		"Change password": {
 			"uri": "https://api-production.august.com/users",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"password\":\"{{Password}}\"\n}",
 			"description": "Change password"
 		},
 		"Change Profile": {
 			"uri": "https://api-production.august.com/users",
 			"method": "PUT",
-			"headers": [
-				{
-					"name": "Content-Type",
-					"value": "application/json"
-				},
-				{
-					"name": "x-august-api-key",
-					"value": "{{KeaseApiKey}}"
-				},
-				{
-					"name": "x-august-access-token",
-					"value": "{{ApiKey}}"
-				}
-			],
+			"headers": {
+				"Content-Type": "application/json",
+				"x-august-api-key": "{{KeaseApiKey}}",
+				"x-august-access-token": "{{ApiKey}}"
+			},
 			"body": "{\n  \"FirstName\":\"\",\n  \"LastName\":\"\",\n  \"Email\": \"{{Email}}\",\n  \"PhoneNo\": \"{{Phone}}\"\n}",
 			"description": "Change Profile Info"
 		}
