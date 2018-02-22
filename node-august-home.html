@@ -65,24 +65,22 @@
     <p>When triggered, this node will retrieve data from the August API. This node relies heavily on the work of
 		<a href="https://github.com/jmaxxz/">jmaxxz</a> in uncovering how the API works.</p>	
 		<p>The input message payload should be a Javascript Object or
-		JSON in the form <code>{ "group": "Group Name", "name" : "Request Name" }</code>. Any needed options
+		JSON in this form: <code>{ "group": "Group Name", "name" : "Request Name" }</code>. Any needed options
 		for the request are set in the node configuration, but additional one-off options can be passed in
-		with the input data like this:
-		<code>{
+		with the input data like this:</p><p><code>{
     "group": "Group name from requests.json",
     "name": "Name of the request from requests.json",
     "options": {
         "Option Name": "Data",
         "Option Name": "Data"
     }
-}</code> For example, to call the API to check for firmware updates, the node input could be:
-		<code>{
+}</code></p><p>For example, to call the API to check for firmware updates, the node input could be:</p><p><code>{
     "group": "Lock",
     "name": "Check for firmware updates",
     "options": {
         "LockId": "12345"
     }
-}</code> See the <a href="https://github.com/theminor/node-red-contrib-august-home/blob/master/requests.json"><code>requests.json</code></a>
+}</code></p><p>See the <a href="https://github.com/theminor/node-red-contrib-august-home/blob/master/requests.json"><code>requests.json</code></a>
 	file for all of the available commands that <a href="https://github.com/jmaxxz/">jmaxxz</a> has discovered
 	in his project (which were basically copied directly into this module).</p>
     <p><code>msg.payload</code> is returned upon a successful API status request
@@ -93,6 +91,6 @@
         <li><a href="https://medium.com/@nolanbrown/the-process-of-reverse-engineering-the-august-lock-api-9dbd12ab65cb">The Process of Reverse Engineering the August Lock API</a></li>
         <li><a href="https://medium.com/@nolanbrown/august-lock-rest-apis-the-basics-7ec7f31e7874">August Lock REST APIs (the basics)I</a></li>
         <li><a href="https://github.com/jmaxxz/keymaker/">keymaker - A tool chain for interacting with the August lock ecosystem developed whilst researching the security of the August lock</a></li>
-        <li><a href="https://github.com/theminor/node-red-contrib-august-home">GitHub</a> - repository for this node</li>
+        <li><a href="https://github.com/theminor/node-red-contrib-august-home">GitHub repository for this node</a></li>
     </ul>
 </script>
