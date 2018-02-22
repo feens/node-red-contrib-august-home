@@ -67,6 +67,6 @@ module.exports.apiCall = async function(configs, groupName, itemName) {
 		if (typeof opts[key] === 'string') opts[key] = replVals(opts[key]);
 		if (key === 'headers') Object.keys(opts[key]).forEach(hdrKey => { opts[key][hdrKey] = replVals(opts[key][hdrKey]); });
 	});
-	console.log('request(' + JSON.stringify(opts) + ')');  // for debugging. *** TO-DO: delete
+	// console.log('request(' + JSON.stringify(opts) + ')');  // for debugging
 	return await request(opts);
 };
